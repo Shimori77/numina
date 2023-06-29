@@ -17,13 +17,13 @@ typedef struct nmn_lba_s {
 } __attribute__((packed)) NmnLBA;
 
 typedef struct nmn_header_s {
-    uint8_t     version;
-    uint8_t     block_size;
-    uint16_t    reserved_blocks;
-    NmnLBA      lba_start;
-    NmnLBA      lba_end;
-    uint64_t    block_bitmap_count;
-    NmnLBA      root_directory_lba;
+    uint8_t     version;                // Version of Numina being used
+    uint8_t     block_size;             // Size of the block
+    uint16_t    reserved_blocks;        // Amount of reserved blocks
+    NmnLBA      lba_start;              // LBA of the start of this partition
+    NmnLBA      lba_end;                // LBA of the end of this partition
+    uint64_t    block_bitmap_count;     // Amount of blocks that contains data block bitmaps
+    NmnLBA      root_directory_lba;     // LBA of the Root Directory
 } __attribute__((packed)) NmnHeader;
 
 typedef struct nmn_node_s {
