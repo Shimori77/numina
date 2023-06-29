@@ -6,9 +6,9 @@
 
 #define NMN_HEADER_BLOCK_SIZE_512   1
 #define NMN_HEADER_BLOCK_SIZE_1024  2
-#define NMN_HEADER_BLOCK_SIZE_2048  3
-#define NMN_HEADER_BLOCK_SIZE_4096  4
-#define NMN_HEADER_BLOCK_SIZE_8192  5
+#define NMN_HEADER_BLOCK_SIZE_2048  4
+#define NMN_HEADER_BLOCK_SIZE_4096  8
+#define NMN_HEADER_BLOCK_SIZE_8192  16
 
 typedef struct nmn_lba_s {
     uint32_t lba_lsb;       // Least significant bytes of LBA48
